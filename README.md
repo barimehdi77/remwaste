@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+# RemWaste - Skip Size Selection Page Redesign
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a modern redesign of the skip size selection page for We Want Waste. The redesign focuses on providing a clean, responsive, and user-friendly interface while maintaining all the original functionality.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Modern, responsive design that works on both mobile and desktop
+- Clean and intuitive user interface
+- Real-time skip data fetching from the API
+- Interactive skip selection with visual feedback
+- Loading and error states
+- TypeScript for better type safety and developer experience
+- Tailwind CSS for styling
+- Progress stepper for multi-step form navigation
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 19
+- TypeScript
+- Tailwind CSS
+- Axios for API calls
+- Headless UI components
+- Heroicons for icons
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone https://github.com/barimehdi77/remwaste.git
+cd remwaste
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will be available at `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+  ├── components/
+  │   ├── ProgressStepper.tsx  # Multi-step progress indicator
+  │   └── SkipSelection.tsx    # Main skip selection component
+  ├── types/
+  │   └── skip.ts             # TypeScript interfaces
+  ├── App.tsx                 # Root component
+  └── index.css              # Global styles and Tailwind imports
+```
 
-### `npm run eject`
+## Design Decisions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Responsive Design**
+   - Mobile-first approach using Tailwind CSS
+   - Grid layout that adapts to different screen sizes
+   - Touch-friendly interface elements
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **User Experience**
+   - Clear visual hierarchy
+   - Interactive feedback on selection
+   - Loading and error states for better user feedback
+   - Smooth transitions and animations
+   - Multi-step progress tracking
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. **Code Quality**
+   - TypeScript for type safety
+   - Component-based architecture
+   - Clean and maintainable code structure
+   - Proper error handling
+   - ESLint for code quality
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## API Integration
 
-## Learn More
+The application fetches skip data from:
+```
+https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Improvements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add skip images
+- Implement skip comparison feature
+- Add more detailed skip information
+- Implement skip size calculator
+- Add user reviews and ratings
+- Implement skip availability checking
+- Add form validation
+- Implement user authentication
+- Add order tracking system
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
